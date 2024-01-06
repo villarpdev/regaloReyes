@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Evita que aparezca una barra de desplazamiento al cambiar el fondo */
+}
+
+#contenedor-fondo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #ff44ff 0, #ff30fe 25%, #db10f8 50%, #b200f2 75%, #8800f0 100%);
+    transition: background 1s ease-in-out; /* Ajustado para aplicar la transición a toda la propiedad de fondo */
+}
+
+.contenedor-imagen {
+    text-align: center;
+}
+
+.regalo {
+    max-width: 50%;
+    height: auto;
+    cursor: pointer; /* Cambiamos el cursor a pointer para indicar que la imagen es clickeable */
+    transition: transform 0.5s ease-in-out; /* Añadimos una transición a la propiedad transform para la animación */
+}
+
+.sorpresa {
+    display: none;
+    font-size: 24px;
+    color: white;
+}
+
+.regalo-shake {
+    animation: shake 0.25s ease-in-out; /* Añade la animación de shake */
+}
+
+.regalo-ampliado {
+    animation: ampliar 1s ease-in-out; /* Añade la animación de ampliación */
+    transform-origin: center;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes ampliar {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(10); /* Puedes ajustar el factor de escala según tus necesidades */
+    }
+}
