@@ -7,7 +7,6 @@ var textoObtenido;
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var textoSorpresa = document.getElementById('texto-sorpresa');
                     textoObtenido = xhr.responseText;
-                    textoObtenido = "1Ya tenemos tu regalo!!"
                     textoSorpresa.textContent = textoObtenido.substring(1);
                 }
             };
