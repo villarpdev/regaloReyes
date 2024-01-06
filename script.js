@@ -2,7 +2,8 @@ var textoObtenido;
 
         function cargarTextoDesdeArchivo() {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'sorpresa.txt', true);
+            var url = 'sorpresa.txt?rand=' + Math.random();
+            xhr.open('GET', url, true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var textoSorpresa = document.getElementById('texto-sorpresa');
