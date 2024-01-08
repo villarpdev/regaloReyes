@@ -23,7 +23,7 @@ var textoObtenido;
             cargarTextoDesdeArchivo();
 
             // Añadir la clase de animación de shake al regalo
-            imagenRegalo.classList.add('regalo-shake');
+            imagenRegalo.classList.add('shake-bottom');
 
             // Esperar a que termine la animación de shake antes de iniciar la animación de ampliación
             setTimeout(function () {
@@ -39,6 +39,8 @@ var textoObtenido;
                     }else{
                         contenedorFondo.style.background = 'linear-gradient(135deg, #ff7812 0, #ff6513 16.67%, #ff4e12 33.33%, #f82d10 50%, #ee0010 66.67%, #e50014 83.33%, #de001a 100%)';
                     }
+
+                    contenedorFondo.classList.add('fade-in');
                     // Cambiar el fondo del contenedor a otro gradiente o imagen si lo prefieres
                 }, 1000); // Ajusta el tiempo según la duración de la animación de ampliación
             }, 250); // Ajusta el tiempo según la duración de la animación de shake
